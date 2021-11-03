@@ -21,4 +21,26 @@ The benefits of each are as follows:
 One of the design goals of all of this is to make the AMI (or resultant docker) so easily deployable that we can migrate it between AWS, Asure and/or GCP. Additionally, I'd like to see if we can make it use cloud hosted (GitHub?) configuration files so that we can use AWS spot instances and save 90% on the instance cost since these will be on demand instances that we only use occasionally during a LAN. 
 
 
+Getting the AndrewMarchukov docker working:
 
+In spite of this being a docker and supposedly standalone, the docker needs some config files ready to go on the "host OS" that we'll need to get from the cloud before it's ready to launch. 
+
+As such, here is the script to download all of that from the cloud and put it where the launch script expects it to be (should we integrate this into an AMI?):
+
+#/bin/bash
+sudo mkdir -p /home/user/coop-modmap
+sudo mkdir -p /home/user/coop-modmap/Mods
+sudo mkdir -p /home/user/coop-modmap/config/ini
+sudo mkdir -p /home/user/coop-modmap/config/txt
+sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/modmap.env
+sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Engine.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Engine.ini
+sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Game.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Game.ini
+
+
+The launch script for this docker is as follows, taken verbatim from the project:
+
+docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
+--name sandstorm-modmap --net=host \
+-v /home/user/coop-modmap/Mods:/home/steam/steamcmd/sandstorm/Insurgency/Mods:rw \
+-v /home/user/coop-modmap/config/ini:/home/steam/steamcmd/sandstorm/Insurgency/Saved/Config/LinuxServer:ro \
+-v /home/user/coop-modmap/config/txt:/home/steam/steamcmd/sandstorm/Insurgency/Config/Server:ro andrewmhub/insurgency-sandstorm:latest
