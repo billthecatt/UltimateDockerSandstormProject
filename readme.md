@@ -57,3 +57,10 @@ fatal error: runtime: out of memory
 As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type. ( t1micro instances have 1G of ram by default and if we change this, we'll incur additonal costs. ) We'll continue testing w/ the other docker projects to see if they are lighter weight...
 
 #### Getting the SnickCH docker working:
+```
+docker pull snickch/insurgencysandstormdedicatedserver
+```
+
+While this server seems to be lighter weight than the other, 1G is certianly not enough ram for these instances, with docker running as an abstraction layer between the OS and the proces..
+
+
