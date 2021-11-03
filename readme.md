@@ -26,7 +26,7 @@ One of the design goals of all of this is to make the AMI (or resultant docker) 
 
 In spite of this being a docker and supposedly standalone, the docker needs some config files ready to go on the "host OS" that we'll need to get from the cloud before it's ready to launch. 
 
-As such, here is the script to download all of that from the cloud and put it where the launch script expects it to be (should we integrate this into an AMI?):
+As such, here is the script to download all of that from the cloud and put it where the launch script expects it to be (should we integrate this into the AMI build script so it's all ready to go?):
 
 ```
 #/bin/bash
@@ -48,3 +48,12 @@ docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
 -v /home/user/coop-modmap/config/ini:/home/steam/steamcmd/sandstorm/Insurgency/Saved/Config/LinuxServer:ro \
 -v /home/user/coop-modmap/config/txt:/home/steam/steamcmd/sandstorm/Insurgency/Config/Server:ro andrewmhub/insurgency-sandstorm:latest
 ```
+
+Evidently this is too much for a t1micro instance because shortly after docker launch, I'm seeing the following errors on even the most basic docker command:
+```
+[ec2-user@ip-172-31-80-197 ~]$ docker list
+fatal error: runtime: out of memory
+```
+As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type.
+
+####
