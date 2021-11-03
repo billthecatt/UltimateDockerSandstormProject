@@ -54,6 +54,6 @@ Evidently this is too much for a t1micro instance because shortly after docker l
 [ec2-user@ip-172-31-80-197 ~]$ docker stop
 fatal error: runtime: out of memory
 ```
-As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type. ( t1micro instances have 1G of ram by default and if we change this, we'll incur additonal costs. )
+As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type. ( t1micro instances have 1G of ram by default and if we change this, we'll incur additonal costs. ) We'll continue testing w/ the other docker projects to see if they are lighter weight...
 
-####
+#### Getting the SnickCH docker working:
