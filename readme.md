@@ -27,6 +27,7 @@ In spite of this being a docker and supposedly standalone, the docker needs some
 
 As such, here is the script to download all of that from the cloud and put it where the launch script expects it to be (should we integrate this into an AMI?):
 
+```
 #/bin/bash
 sudo mkdir -p /home/user/coop-modmap
 sudo mkdir -p /home/user/coop-modmap/Mods
@@ -35,12 +36,14 @@ sudo mkdir -p /home/user/coop-modmap/config/txt
 sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/modmap.env
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Engine.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Engine.ini
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Game.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Game.ini
-
+```
 
 The launch script for this docker is as follows, taken verbatim from the project:
 
+```
 docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
 --name sandstorm-modmap --net=host \
 -v /home/user/coop-modmap/Mods:/home/steam/steamcmd/sandstorm/Insurgency/Mods:rw \
 -v /home/user/coop-modmap/config/ini:/home/steam/steamcmd/sandstorm/Insurgency/Saved/Config/LinuxServer:ro \
 -v /home/user/coop-modmap/config/txt:/home/steam/steamcmd/sandstorm/Insurgency/Config/Server:ro andrewmhub/insurgency-sandstorm:latest
+```
