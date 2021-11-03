@@ -51,9 +51,9 @@ docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
 
 Evidently this is too much for a t1micro instance because shortly after docker launch, I'm seeing the following errors on even the most basic docker command:
 ```
-[ec2-user@ip-172-31-80-197 ~]$ docker list
+[ec2-user@ip-172-31-80-197 ~]$ docker stop
 fatal error: runtime: out of memory
 ```
-As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type.
+As a result, we'll need to research ways to slim down the memory requirements and/or research a better EC2 instance type. ( t1micro instances have 1G of ram by default and if we change this, we'll incur additonal costs. )
 
 ####
