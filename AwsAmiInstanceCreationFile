@@ -1,9 +1,12 @@
 Here is the script that we're working on so far:
 
 #!/bin/bash
+
+#get the system installed and install some of the basics we'll need for this all to work..
 yum update -y
 yum install htop -y
-#yum install docker -y
+yum install wget -y
+
 #yum install -y httpd
 #systemctl start httpd
 #systemctl enable httpd
