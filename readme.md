@@ -34,7 +34,12 @@ sudo mkdir -p /home/user/coop-modmap
 sudo mkdir -p /home/user/coop-modmap/Mods
 sudo mkdir -p /home/user/coop-modmap/config/ini
 sudo mkdir -p /home/user/coop-modmap/config/txt
-sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/modmap.env
+
+#this is the stock modmap.env from his project
+#sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/modmap.env
+
+#This is our custom one...
+sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://raw.githubusercontent.com/billthecatt/UltimateDockerSandstormProject/main/modmap.env 
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Engine.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Engine.ini
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Game.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Game.ini
 # prereqs setup now we can pull the docker image and not have it barf:
