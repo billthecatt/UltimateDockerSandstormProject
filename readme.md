@@ -85,6 +85,8 @@ docker run <SYNTAX> #use the syntax above to run the new container
 ```
 Interestingly enough, this instance provides no way to connect to the running console or validate that it's launched correctly. (Other than ps -ef and checking for the running server instance.) This leaves much to be desired, but appears to at least launch and not crash under a t2.medium instance. I'll need to do some playtesting to ensure it doesn't suck..
 
+Update, t2.medium appears to accept client connections and not lag too bad at all. 
+
 #### Getting the SnickCH docker working:
 
 ```
