@@ -54,7 +54,7 @@ sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Mods.txt h
 docker pull andrewmhub/insurgency-sandstorm
 ```
 
-The launch script for this docker is as follows, taken verbatim from the project:
+The (initial) launch script for this docker is as follows, taken verbatim from the project:
 
 ```
 docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
