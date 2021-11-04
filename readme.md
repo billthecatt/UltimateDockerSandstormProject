@@ -64,6 +64,12 @@ Once you get the docker instance launched correctly you can connect to it via ba
 ```
 docker container exec -it sandstorm-modmap /bin/bash
 ```
+If you wish to stop the docker instance use the following:
+```
+docker stop sandstorm-modmap
+```
+
+Interestingly enough, this instance provides no way to connect to the running console or validate that it's launched correctly. (Other than ps -ef and checking for the running server instance.) This leaves much to be desired, but appears to at least launch and not crash under a t2.medium instance. I'll need to do some playtesting to ensure it doesn't suck..
 
 #### Getting the SnickCH docker working:
 
