@@ -37,6 +37,8 @@ sudo mkdir -p /home/user/coop-modmap/config/txt
 sudo wget --no-check-certificate -O /home/user/coop-modmap/modmap.env https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/modmap.env
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Engine.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Engine.ini
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Game.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Game.ini
+# prereqs setup now we can pull the docker image and not have it barf:
+docker pull andrewmhub/insurgency-sandstorm
 ```
 
 The launch script for this docker is as follows, taken verbatim from the project:
