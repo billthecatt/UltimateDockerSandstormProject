@@ -60,7 +60,13 @@ As a result, we'll need to research ways to slim down the memory requirements an
 
 Testing with a t2.medium (2vcpu, 4g ram, 30g storage) appears to support docker better so far.. We'll see how well it supports the full install of SandStorm..
 
+Once you get the docker instance launched correctly you can connect to it via bash as follows:
+```
+docker container exec -it sandstorm-modmap /bin/bash
+```
+
 #### Getting the SnickCH docker working:
+
 ```
 docker pull snickch/insurgencysandstormdedicatedserver
 ```
