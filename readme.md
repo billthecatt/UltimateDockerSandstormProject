@@ -77,6 +77,12 @@ If you want to start it after having stopped it, use the following:
 ```
 docker start sandstorm-modmap
 ```
+If you want to change anything in the modmap.env file, this gets built into the container at instantiation and can't be changed on the fly, even if you modify the local file. So you have to remove the docker container and start all over, as follows:
+```
+docker stop sandstorm-modmap
+docker rm sandstorm-modmap
+docker run <SYNTAX> #use the syntax above to run the new container
+```
 Interestingly enough, this instance provides no way to connect to the running console or validate that it's launched correctly. (Other than ps -ef and checking for the running server instance.) This leaves much to be desired, but appears to at least launch and not crash under a t2.medium instance. I'll need to do some playtesting to ensure it doesn't suck..
 
 #### Getting the SnickCH docker working:
