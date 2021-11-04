@@ -6,6 +6,7 @@ Here is the script that we're working on so far:
 yum update -y
 yum install htop -y
 yum install wget -y
+yum install nano -y
 
 #yum install -y httpd
 #systemctl start httpd
