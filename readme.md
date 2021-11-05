@@ -99,12 +99,14 @@ Note. when you remove and rebuild the docker instance it will redownload 2.9G of
 
 t2.medium appears to not support more than one player from a bandwidth and/or CPU perspective. Symptons were packetloss and disconnects after the 2nd player joined. The instance has enough disk space and ram, so we'll need to try increasing the CPU until we're not getting packet loss and disconnects. 
 
+Now testing t2.xlarge which boosts the vcpu from 2 to 4 and the ram from 4g to 16g.   
+
 #### Getting the SnickCH docker working:
 
 ```
 docker pull snickch/insurgencysandstormdedicatedserver
 ```
 
-While this server seems to be lighter weight than the other, 1G is certianly not enough ram for these instances, with docker running as an abstraction layer between the OS and the proces..
+While this server seems to be lighter weight than the other, 1G is certianly not enough ram for these instances, with docker running as an abstraction layer between the OS and the process..
 
 
