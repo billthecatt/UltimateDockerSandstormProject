@@ -101,6 +101,8 @@ t2.medium appears to not support more than one player from a bandwidth and/or CP
 
 Now testing t2.xlarge which boosts the vcpu from 2 to 4 and the ram from 4g to 16g.   
 
+After playtesting t2.xlarge this doesn't appear to be the right instance class due to the busrstable nature of this instance family. See here for why: https://www.apptio.com/blog/ec2-m5-vs-t3/ as a result, we're moving to testing m5.large which is cheaper anyway?!?!
+
 #### Getting the SnickCH docker working:
 
 ```
