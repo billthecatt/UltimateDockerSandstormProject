@@ -48,13 +48,13 @@ sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Game.ini h
 #populate the txt folder with the other config files, at some point we'll want to make our own custom versions of these. 
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Admins.txt https://raw.githubusercontent.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/master/config/txt/Admins.txt
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/MapCycle.txt https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/txt/MapCycle.txt
-sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Mods.txt https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/txt/Mods.txt
+sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Mods.txt https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/txt/Mods.txt
 
 # prereqs setup now we can pull the docker image and not have it barf:
 docker pull andrewmhub/insurgency-sandstorm
 ```
 
-The (initial) launch script for this docker is as follows, taken verbatim from the project:
+The (initial) launch script for this docker is as follows, taken verbatim from the project (note where the local files get mounted into the docker instance directory structure, this is important..):
 
 ```
 docker run -d --restart always --env-file /home/user/coop-modmap/modmap.env \
