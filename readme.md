@@ -47,7 +47,12 @@ sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Game.ini h
 
 #populate the txt folder with the other config files, we're now using our own custom versions of these. May be worth compairing to the original project to see if these are goofed in any way..
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Admins.txt https://raw.githubusercontent.com/billthecatt/UltimateDockerSandstormProject/main/Admins.txt
+#My custom mapcyclefile that may be broken.. 
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/MapCycle.txt https://raw.githubusercontent.com/billthecatt/UltimateDockerSandstormProject/main/Mapcycle.txt
+
+#Project specific mapcycle file.
+sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/MapCycle.txt https://raw.githubusercontent.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/master/config/txt/MapCycle.txt
+
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Mods.txt https://raw.githubusercontent.com/billthecatt/UltimateDockerSandstormProject/main/Mods.txt
 
 # prereqs setup now we can pull the docker image and not have it barf:
