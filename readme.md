@@ -95,7 +95,7 @@ Interestingly enough, this instance provides no way to connect to the running co
 
 Update, t2.medium appears to accept client connections and not lag too bad at all. 
 
-Note. when you remove and rebuild the docker instance it will redownload 2.9G of something.. every time. This is faster in the cloud than it would be in the barn, but it still takes some time and should be done in advance of playtesting..
+Note. when you remove and rebuild the docker instance it will redownload 2.9G of something.. every time. This is faster in the cloud than it would be in the barn, but it still takes some time and should be done in advance of playtesting.. The extracting of 2.9G on the instance takes longer than the download.
 
 #### Getting the SnickCH docker working:
 
