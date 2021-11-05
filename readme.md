@@ -46,7 +46,7 @@ sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Engine.ini
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/ini/Game.ini https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/ini/Game.ini
 
 #populate the txt folder with the other config files, at some point we'll want to make our own custom versions of these. 
-sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Admins.txt https://raw.githubusercontent.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/master/config/txt/Admins.txt
+sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Admins.txt https://raw.githubusercontent.com/billthecatt/UltimateDockerSandstormProject/main/Admins.txt
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/MapCycle.txt https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/txt/MapCycle.txt
 sudo wget --no-check-certificate -O /home/user/coop-modmap/config/txt/Mods.txt https://github.com/AndrewMarchukov/insurgency-sandstorm-server-dockerize/raw/master/config/txt/Mods.txt
 
