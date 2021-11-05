@@ -97,6 +97,8 @@ Update, t2.medium appears to accept client connections and not lag too bad at al
 
 Note. when you remove and rebuild the docker instance it will redownload 2.9G of something.. every time. This is faster in the cloud than it would be in the barn, but it still takes some time and should be done in advance of playtesting.. The extracting of 2.9G on the instance takes longer than the download.
 
+t2.medium appears to not support more than one player from a bandwidth and/or CPU perspective. Symptons were packetloss and disconnects after the 2nd player joined. The instance has enough disk space and ram, so we'll need to try increasing the CPU until we're not getting packet loss and disconnects. 
+
 #### Getting the SnickCH docker working:
 
 ```
