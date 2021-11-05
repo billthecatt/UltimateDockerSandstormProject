@@ -8,6 +8,7 @@ yum install htop -y
 yum install wget -y
 yum install nano -y
 ln /bin/nano /bin/pico -s
+yum install unzip -y
 
 #yum install -y httpd
 #systemctl start httpd
