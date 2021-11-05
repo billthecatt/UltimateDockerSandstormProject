@@ -105,7 +105,7 @@ After playtesting t2.xlarge this doesn't appear to be the right instance class d
 
 M5.large had two cpu and was disconnecting and lagging.. 
 
-On to m5a.xlarge.. 
+On to m5.xlarge.. 
 
 #### Getting the SnickCH docker working:
 
