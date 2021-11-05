@@ -1,0 +1,11 @@
+;This is our default admins file. I don't care if it's public because all it is, is a list of our steamIDs and as such isn't exactly confidential information.
+76561197960405992
+;billcat-actual
+76561198402036511
+;billy_da_butcher
+76561198055064875
+;adam
+76561198024092545
+;drummer
+76561198018994882
+;nick
