@@ -113,6 +113,8 @@ M5.large had two cpu and was disconnecting and lagging..
 
 On to m5.xlarge.. 
 
+After further research, this "hitching" and lag behavior may be from the instance downloading all of the mod files, the ISMC mod being 4.4g per download, which it then has to uncompress in the background and uses 9g for the operation. So, we may need to give the instance more disk space and a longer startup time, to get everything downloaded before we attempt to playtest it.
+
 #### Getting the SnickCH docker working:
 
 ```
